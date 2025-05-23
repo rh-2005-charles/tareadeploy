@@ -5,8 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ic_tienda_data.Sources.Data
 {
-    //public class IcTiendaDbContext : DbContext
-    public class IcTiendaDbContext : IdentityDbContext<User>
+    public class IcTiendaDbContext : DbContext
     {
         public IcTiendaDbContext(DbContextOptions<IcTiendaDbContext> options) : base(options) { }
 
@@ -44,6 +43,6 @@ namespace ic_tienda_data.Sources.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
-        //public DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
