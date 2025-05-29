@@ -3,6 +3,7 @@ using ic_tienda_bussines.Repositories;
 using ic_tienda_bussines.Services;
 using ic_tienda_data.Repositories;
 using ic_tienda_data.Services;
+using ic_tienda_data.Sources.Data.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -102,6 +103,16 @@ builder.Services.AddCors(options =>
 
 // Registrar servicios
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddHttpClient<IFacturacionElectronicaService, FacturacionElectronicaService>();
+
+// Configuración del HttpClient para Nubefact
+builder.Services.AddHttpClient<INubefactService, NubefactService>((provider, client) =>
+{
+    var config = provider.GetRequiredService<IConfiguration>().GetSection("Nubefact").Get<NubefactConfig>();
+    client.BaseAddress = new Uri(config.ApiUrl);
+    client.DefaultRequestHeaders.Add("Authorization", $"Token token={config.ApiToken}");
+});
+
 // Para productos
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
