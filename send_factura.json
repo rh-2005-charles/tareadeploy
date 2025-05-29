@@ -1,0 +1,34 @@
+{
+  "operacion": "generar_comprobante",
+  "tipo_de_comprobante": 1,
+  "serie": "FFF1",
+  "numero": 2,
+  "sunat_transaction": 1,
+  "cliente_tipo_de_documento": 6,
+  "cliente_numero_de_documento": "20600695771",
+  "cliente_denominacion": "NUBEFACT SA",
+  "cliente_direccion": "CALLE LIBERTAD 116 MIRAFLORES - LIMA - PERU",
+  "cliente_email": "tucliente@gmail.com",
+  "fecha_de_emision": "2025-05-29",
+  "moneda": 1,
+  "porcentaje_de_igv": 18.0,
+  "total_gravada": 10,
+  "total_igv": 1.8,
+  "total": 11.8,
+  "enviar_automaticamente_a_la_sunat": false,
+  "enviar_automaticamente_al_cliente": false,
+  "items": [
+    {
+      "unidad_de_medida": "NIU",
+      "codigo": "P001",
+      "descripcion": "DETALLE DEL PRODUCTO",
+      "cantidad": 1,
+      "valor_unitario": 10,
+      "precio_unitario": 11.8,
+      "subtotal": 10,
+      "tipo_de_igv": 1,
+      "igv": 1.8,
+      "total": 11.8
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "IcTiendaDb": "Server=localhost; Port=3306; Database=authgoogle; User=root; Password=123456789;",
+    "IcLocalDb": "Data Source=ic_tienda.db"
+  },
+  "Authentication": {
+    "Google": {
+      "ClientId": "257148927349-9ekjfs5i9h #   l506arjj53sa5uc39tg3i1.  #   apps.   #  googleusercontent.   #   com",
+      "ClientSecret": "GOCSPX-O_lpow4mPs  #  QrUXTswAglV0NYbsRk"
+    },
+    "Facebook": {
+      "AppId": "facebook-app-id",
+      "AppSecret": "facebook-app-secret"
+    },
+    "Jwt": {
+      "Key": "P5mW3h6H8w6Q1j1A5T7XlP8dL9eN4M1z2U0R8F6tT3Jk4Q5L0F3N2P1O5Z7B6F9",
+      "Issuer": "MyAppIssuer",
+      "Audience": "MyAppAudience",
+      "ExpiryMinutes": "900"
+    }
+  },
+  "Cors": {
+    "AllowedOrigins": [
+      "http://localhost:5173",
+      "http://localhost:4200",
+      "https://miapp.com"
+    ]
+  },
+  "Nubefact": {
+    "ApiUrl": "https://api.nubefact.com/api/v1/2f122f63-02c2-4446-87ee-f35d5af6cd97",
+    "ApiToken": "f64101bfcfe5426e8e7944373b7fc65386e89a370f1d4b6ebcb68ea86925cd0f",
+    "NumeroDocumentoEmisor": "10444813682",
+    "TipoDocumentoEmisor": "6"
+  }
+
